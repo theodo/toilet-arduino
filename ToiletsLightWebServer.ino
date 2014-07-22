@@ -88,6 +88,7 @@ void listenForEthernetClients() {
           // send a standard http response header
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: application/json");
+          client.println("Access-Control-Allow-Origin: *");
           client.println();
           // print the current readings, in HTML format:
           client.print("[{\"id\": 1, \"type\": \"men\", \"value\": ");
